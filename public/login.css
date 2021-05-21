@@ -1,0 +1,125 @@
+body {
+    position: relative;
+    background: rgb(204, 203, 203);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .main-container {
+    width: 375px;
+    height: 812px;
+    background-image: url('../Assets/purple6.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:black;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px grey;
+    transition: 0.2s ease-in;  
+  }
+  .content-container {
+      /* login */
+    width: 375px;
+    height: 700px;
+    border-radius: 50px;
+    background-image: url('../Assets/purple5.png');
+    transition: 0.5s ease-out;
+    font-family: 'Poppins', sans-serif;
+  }
+  .main-contents {
+      /* sign-up */
+    width: 375px;
+    height: 700px;
+    border-radius: 50px;
+    background-image: url('../Assets/purple8.png');
+    /* box-shadow: 2.5px 2.5px 2.5px grey; */
+    transition: 0.5s ease-out;
+    font-family: 'Poppins', sans-serif;
+  }
+  header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 10% 5% 10%;
+    align-items: center;
+    text-decoration: none;
+  }
+  .header a {
+    color: white;
+    text-decoration: none;
+  }
+  .header a:hover {
+    text-shadow: 1px 1px white;
+  }
+  .header h3 {
+    font-size: smaller;
+    letter-spacing: 1px;
+    font-weight: lighter;
+  }
+  .header h3:hover {
+    text-shadow: 1px 1px white;
+  }
+form {
+    height: 550px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+input {
+    /* width: 250px;
+    height: 30px;
+    box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(170, 170, 204, 0.25), inset 5px 5px 10px rgba(170, 170, 204, 0.5), inset -5px -5px 10px #FFFFFF;
+    border-radius: 40px; */
+    width: 280px;
+    height: 30px;
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.5), 2px 2px 5px rgba(170, 170, 204, 0.25), 5px 5px 10px rgba(170, 170, 204, 0.5), -5px -5px 10px rgba(170, 170, 204, 0.5);
+    border-radius: 32px;
+    background: #F5F5FA;
+    color: #7878AB;
+    font-weight: bold;
+    outline: white;
+    border: white;
+    color: black;
+    font-size: 20px;
+    font-weight: 300; 
+    text-align: center;
+    transition: 0.2s ease-out;
+}
+input:hover {
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(170, 170, 204, 0.25), 10px 10px 20px rgba(170, 170, 204, 0.5), -10px -10px 20px rgba(170, 170, 204, 0.5);
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+}
+    button {
+      width: 200px;
+      height: 50px;
+      box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.5), 2px 2px 5px rgba(170, 170, 204, 0.25), 5px 5px 10px rgba(170, 170, 204, 0.5), -5px -5px 10px rgba(170, 170, 204, 0.5);
+      border-radius: 32px;
+      background: #F5F5FA;
+      font-family: 'Poppins', sans-serif;
+      font-size: x-large;
+      letter-spacing: 1px;
+      color: #db5d51;
+      font-weight: bold;
+      outline: white;
+      border: white;
+    }
+    button:hover {
+      box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(170, 170, 204, 0.25), 10px 10px 20px rgba(170, 170, 204, 0.5), -10px -10px 20px rgba(170, 170, 204, 0.5);
+    }
+.fname, .lname, .email, .username, .password {
+    line-height: 0px;
+}
+a {
+    text-decoration: none;
+    color: grey;
+    font-size: small;
+}
+.signUp a:hover {
+    color: black;
+}

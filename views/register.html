@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To Do List</title>
+        <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="main-contents">
+            <header class="header">
+                <a href="/">
+                    <h1>ToDo</h1>
+                </a>
+                <a href="/login">
+                    <h3>Login</h3>
+                </a>
+            </header>
+            <section class="contents">
+                <form action="/register" method="POST" class="container">
+                    <h1>Create Account</h1>
+                    <div class="fname">
+                        <h3>First Name: </h3>
+                        <input type="text" name="firstName" required>
+                    </div>
+                    <div class="lname">
+                        <h3>Last Name: </h3>
+                        <input type="text" name="lastName" required>
+                    </div>
+                    <div class="email">
+                        <h3>Email: </h3>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="username">
+                        <h3>Username: </h3>
+                        <input type="text" name="username" required>
+                    </div>
+                    <div class="password">
+                        <h3>Password: </h3>
+                        <input type="password" name="password" required>
+                    </div>
+                    <br>
+                    <div class="login">
+                        <a href="/login">Already Have an Account? Login Here</a>
+                    </div>
+                </form>
+                <div class="button">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
