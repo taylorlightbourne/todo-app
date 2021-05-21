@@ -7,30 +7,24 @@
         <title>To Do List</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="welcome.css">
+        <link rel="stylesheet" type="text/css" href="login.css">
 </head>
 <body>
     <div class="main-container">
         <div class="content-container">
             <header class="header">
-                    <h1>ToDo</h1>
+                <h1>ToDo</h1>
                 <a href="/login">
                     <h3>Login/Sign Up</h3>
                 </a>
             </header>
             <section class="contents">
-                <div class="image">
-                    <img src="assets/image1.png" width="350px" height="350px">
-                </div>
-                <div class="message">
-                    <h1>Keep Track of Your Tasks</h1>
-                    <h3>Never Have an 'Uh-Oh' Moment Again</h3>
-                </div>
-                <div class="buttons">
-                    <a href="/createTask">
-                        <button>Welcome</button>
+                <form action="/logout" method="POST" class="container">
+                    <h1>You Are Now Logged Out</h1>
+                    <a href="/">
+                        <button>Return Home</button>
                     </a>
-                </div>
+                </form>
             </section>
         </div>
     </div>

@@ -29,7 +29,15 @@ const users = []
 app.use(express.static('../public'));
 app.use(express.json());
 app.use(cors());
-// app.use(flash());
+app.use(flash());
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    })
+);
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.engine("html", es6Renderer);
 app.set("views", "../views");
@@ -38,17 +46,53 @@ app.set("view engine", "html");
 //access our form information inside of our req
 app.use(express.urlencoded({ extended: false }));
 
+//Custom Middleware
+function checkAuthenticated(req, res, next) {
+    if(req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect("/login");
+}
+function checkIfUserIsLoggedIn(req, res, next) {
+    if(req.isAuthenticated()) {
+        return res.redirect("/app");
+    }
+    next()
+}
+
+
 app.get("/", (req, res) =>  {
     res.render("index");
 });
 
+app.get("/createTask", (req, res) =>  {
+    res.render("createTask");
+});
 
-app.get("/login", (req, res) =>  {
-    res.render("login");
+app.get("/markDone", (req, res) =>  {
+    res.render("markDone");
+});
+
+app.get("/app", checkAuthenticated, (req, res) =>  {
+    res.render("app");
+});
+
+app.get("/logout", (req, res) =>  {
+    res.render("logout");
 });
 
 
-app.get("/register", (req, res) =>  {
+app.get("/login", checkIfUserIsLoggedIn, (req, res) =>  {
+    res.render("login");
+});
+
+app.post("/login", passport.authenticate("local", {
+    successRedirect: "/app",
+    failureRedirect: "/login",
+    failureFlash: true,
+}))
+
+app.get("/register", checkIfUserIsLoggedIn, (req, res) =>  {
     res.render("register");
 });
 
@@ -72,6 +116,12 @@ app.post("/register", async (req, res) => {
         res.status(401).redirect("/register")
 
     }
+});
+
+
+app.post("/logout", (req, res) => {
+    req.logOut();
+    res.redirect("/");
 });
 
 app.listen(PORT, () => console.log(`Server is running on localhost:${PORT}`));

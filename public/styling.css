@@ -9,7 +9,7 @@ body {
   .main-container {
     width: 375px;
     height: 812px;
-    background-image: url('../Assets/purple1.png');
+    background-image: url('../Assets/purple6.png');
     background-size: cover;
     background-repeat: no-repeat;
     color:black;
@@ -21,8 +21,7 @@ body {
     width: 375px;
     height: 700px;
     border-radius: 50px;
-    background-image: url('../Assets/purple2.png');
-    box-shadow: 5px 5px 5px grey;
+    background-image: url('../Assets/purple5.png');
     transition: 0.5s ease-out;
     font-family: 'Poppins', sans-serif;
   }
@@ -42,37 +41,44 @@ body {
     text-shadow: 1px 1px white;
   }
   .header h3 {
-    font-size: small;
+    font-size: smaller;
     letter-spacing: 1px;
     font-weight: lighter;
   }
   .header h3:hover {
     text-shadow: 1px 1px white;
-    
-
   }
-  .contents {
-    display: flex;
+.contents {
+    height: 550px;
     justify-content: center;
+    display: flex;
+    align-items: center;
     flex-direction: column;
+}
+.task-input {
+    width: 280px;
+    height: 30px;
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.5), 2px 2px 5px rgba(170, 170, 204, 0.25), 5px 5px 10px rgba(170, 170, 204, 0.5), -5px -5px 10px rgba(170, 170, 204, 0.5);
+    border-radius: 32px;
+    background: #F5F5FA;
+    color: #7878AB;
+    font-weight: bold;
+    outline: white;
+    border: white;
+    color: black;
+    font-size: 20px;
+    font-weight: 300; 
     text-align: center;
-  }
-  .contents h1 {
-    color: rgb(68, 68, 68);
-  }
-.contents h3 {
-  color: grey;
-  font-size: 15px;
-
+    transition: 0.2s ease-out;
 }
-.image {
-  margin-top: 60px;
+.task-input:hover {
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(170, 170, 204, 0.25), 10px 10px 20px rgba(170, 170, 204, 0.5), -10px -10px 20px rgba(170, 170, 204, 0.5);
 }
-.buttons {
-  display: flex;
-  margin-top: 110px;
-  align-items: flex-end;
-  justify-content: center;
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
 }
     button {
       width: 200px;
@@ -87,15 +93,27 @@ body {
       font-weight: bold;
       outline: white;
       border: white;
-
     }
     button:hover {
       box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(170, 170, 204, 0.25), 10px 10px 20px rgba(170, 170, 204, 0.5), -10px -10px 20px rgba(170, 170, 204, 0.5);
     }
-.message {
-  margin-top: 5%;
-  line-height: 10px;
+.fname, .lname, .email, .username, .password {
+    line-height: 0px;
 }
-.buttons a {
-  text-decoration: none;
+a {
+    text-decoration: none;
+    color: grey;
+    font-size: small;
+}
+.signUp a:hover {
+    color: black;
+}
+#input {
+width: 301px;
+height: 59px;
+background: #FFFFFF;
+border: 1px solid #D4D4D4;
+box-sizing: border-box;
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+border-radius: 4px;
 }
