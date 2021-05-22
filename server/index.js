@@ -74,7 +74,7 @@ app.get("/markDone", (req, res) =>  {
 });
 
 app.get("/app", checkAuthenticated, (req, res) =>  {
-    res.render("app");
+    res.render("app", { locals: { firstName: req.user.firstName } });
 });
 
 app.get("/logout", (req, res) =>  {
@@ -83,7 +83,7 @@ app.get("/logout", (req, res) =>  {
 
 
 app.get("/login", checkIfUserIsLoggedIn, (req, res) =>  {
-    res.render("login");
+    res.render("login", { locals: { message: "" } });
 });
 
 app.post("/login", passport.authenticate("local", {
@@ -93,8 +93,10 @@ app.post("/login", passport.authenticate("local", {
 }))
 
 app.get("/register", checkIfUserIsLoggedIn, (req, res) =>  {
-    res.render("register");
-});
+    res.render("register", {
+        locals: { message: "" },
+      });
+    });
 
 app.post("/register", async (req, res) => {
     try {

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/taylorlightbourne/ToDoApp#readme",
   "dependencies": {
+    "@supabase/supabase-js": "^1.11.14",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
