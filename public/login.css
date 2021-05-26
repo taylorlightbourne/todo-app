@@ -120,3 +120,6 @@ a {
 .signUp a:hover {
     color: black;
 }
+.logout-contents {
+  height: 812px;
+}

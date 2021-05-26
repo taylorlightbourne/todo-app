@@ -25,6 +25,12 @@ body {
     transition: 0.5s ease-out;
     font-family: 'Poppins', sans-serif;
   }
+  .contents {
+    margin: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
   header {
     color: white;
     display: flex;
@@ -48,194 +54,90 @@ body {
   .header h3:hover {
     text-shadow: 1px 1px white;
   }
-.contents {
-    height: 550px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.task-input {
-    width: 280px;
-    height: 30px;
-    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.5), 2px 2px 5px rgba(170, 170, 204, 0.25), 5px 5px 10px rgba(170, 170, 204, 0.5), -5px -5px 10px rgba(170, 170, 204, 0.5);
-    border-radius: 32px;
-    background: #F5F5FA;
-    color: #7878AB;
-    font-weight: bold;
-    outline: white;
-    border: white;
-    color: black;
-    font-size: 20px;
-    font-weight: 300; 
-    text-align: center;
-    transition: 0.2s ease-out;
-}
-.task-input:hover {
-    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(170, 170, 204, 0.25), 10px 10px 20px rgba(170, 170, 204, 0.5), -10px -10px 20px rgba(170, 170, 204, 0.5);
-}
-.button {
+  #title {
+    text-align:center;
+    color: #db5d51;
+    text-shadow: 1px 1px white;
+
+  }
+  
+  .button {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 90px;
+  }
+  button {
+    width: 50px;
+    height: 50px;
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.5), 2px 2px 5px rgba(170, 170, 204, 0.25), 5px 5px 10px rgba(170, 170, 204, 0.5), -5px -5px 10px rgba(170, 170, 204, 0.5);
+    border-radius: 32px;
+    background: #F5F5FA;
+    font-family: 'Poppins', sans-serif;
+    font-size: x-large;
+    letter-spacing: 1px;
+    color: #db5d51;
+    font-weight: bold;
+    outline: white;
+    border: white;
+  }
+  button:hover {
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(170, 170, 204, 0.25), 10px 10px 20px rgba(170, 170, 204, 0.5), -10px -10px 20px rgba(170, 170, 204, 0.5);
+  } 
+  .input{
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    height: 25px;
+    border-radius: 25px;
+    width: 300px;
+    margin: 0.25rem;
+    transition: .5s;
+    font-size: 1.15rem;
+  }
+
+.input:hover {
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(170, 170, 204, 0.25), 10px 10px 20px rgba(170, 170, 204, 0.5), -10px -10px 20px rgba(170, 170, 204, 0.5);
 }
-    button {
-      width: 200px;
-      height: 50px;
-      box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.5), 2px 2px 5px rgba(170, 170, 204, 0.25), 5px 5px 10px rgba(170, 170, 204, 0.5), -5px -5px 10px rgba(170, 170, 204, 0.5);
-      border-radius: 32px;
-      background: #F5F5FA;
-      font-family: 'Poppins', sans-serif;
-      font-size: x-large;
-      letter-spacing: 1px;
-      color: #db5d51;
-      font-weight: bold;
-      outline: white;
-      border: white;
-    }
-    button:hover {
-      box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(170, 170, 204, 0.25), 10px 10px 20px rgba(170, 170, 204, 0.5), -10px -10px 20px rgba(170, 170, 204, 0.5);
-    }
-.fname, .lname, .email, .username, .password {
-    line-height: 0px;
-}
-a {
-    text-decoration: none;
-    color: grey;
-    font-size: small;
-}
-.signUp a:hover {
-    color: black;
-}
-#input {
-width: 301px;
-height: 59px;
-background: #FFFFFF;
-border: 1px solid #D4D4D4;
-box-sizing: border-box;
-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-border-radius: 4px;
+.inputDiv{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 10%;
 }
 
-
-/* ------------ youtube.com/CodeExplained ------------ */
-
-.clear{
-  width : 30px;
-  height: 30px;
-  position: absolute;
-  right:20px;
-  top: 20px;
-}
-.clear i{
-  font-size: 30px;
-  color: #FFF;
-}
-.clear i:hover{
-  cursor: pointer;
-  text-shadow: 1px 3px 5px #000;
-  transform: rotate(45deg);
-}
-#date{
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: #FFF;
-  font-size: 25px;
-  font-family: 'Titillium Web', sans-serif;
-}
 
 .item{
-  width:380px;
-  height: 45px;
-  min-height: 45px;
-  position: relative;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.item i.co{
-  position: absolute;
-  font-size: 25px;
-  padding-left:5px;
-  left:15px;
-  top:10px;
-}
-.item i.co:hover{
-  cursor: pointer;
-}
-.fa-check-circle{
-  color:#6eb200;
-}
-.item p.text{
-  position: absolute;
-  padding:0;
-  margin:0;
-  font-size: 20px;
-  left:50px;
-  top:5px;
-  background-color: #FFF;
-  max-width:285px;
-}
-.lineThrough{
-  text-decoration: line-through;
-  color : #ccc;
-}
-.item i.de{
-  position: absolute;
-  font-size: 25px;
-  right:15px;
-  top:10px;
-}
-.item i.de:hover{
-  color:#af0000;
-  cursor: pointer;
-}
-/* ------------ add item ------------ */
-.add-to-do{
-  position: relative;
-  width: 360px;
-  height:40px;
-  background-color: #FFF;
-  padding: 10px;
-  border-top: 1px solid rgba(0,0,0,0.1);
-}
-.add-to-do i{
-  position: absolute;
-  font-size: 40px;
-  color: #4162f6;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  border-bottom: 4px solid #fff;
+  margin-bottom: 1.5rem;
 }
 
-.add-to-do input{
-  position: absolute;
-  left: 50px;
-  height: 35px;
-  width: 310px;
-  background-color: transparent;
-  border: none;
-  font-size: 20px;
-  padding-left:10px;
-}
-.add-to-do input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #4162f6;
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 20px;
-}
-.add-to-do input::-moz-placeholder { /* Firefox 19+ */
-  color: #4162f6;
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 20px;
-}
-.add-to-do input:-ms-input-placeholder { /* IE 10+ */
-  color: #4162f6;
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 20px;
-}
-.add-to-do input:-moz-placeholder { /* Firefox 18- */
-  color: #4162f6;
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 20px;
+.item_input{
+background: none;
+outline: none;
+border: none;
+color: #db5d51;
+font-size: 1.4rem;
+width: 200px;
 }
 
+.add {
+  height: 40px;
+}
+.edit {
+  margin-right: 5%;
+  height: 40px;
+  background: white url('./assets/edit.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.remove {
+  height: 40px;
+  background: white url('./assets/remove.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
